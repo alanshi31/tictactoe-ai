@@ -1,3 +1,9 @@
+/* The cell class encapsulates all relevant data for each individual
+ * board cell. The x and y coordinates are relative to the 2D board
+ * array and the minimax value is used by the computer to determine
+ * whether a cell is the next best move to take.
+ */
+
 package pieces;
 
 public class Cell {
