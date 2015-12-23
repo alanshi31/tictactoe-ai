@@ -75,7 +75,7 @@ public class Game {
 			this.board.move(bestCell, Player.COMPUTER);
 			
 			System.out.println();
-			System.out.println("Computer's move: (" + bestCell.getY() + ", " + bestCell.getX() + ")");
+			System.out.println("Computer's move: " + bestCell);
 			displayBoard();
 			System.out.println();
 		}
