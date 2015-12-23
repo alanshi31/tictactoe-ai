@@ -5,7 +5,7 @@
  * 
  * Note, this class has a scanner member that handles user input and a method to
  * print the current board state to the console. However, the getInput() and 
- * printBoard() methods must still be invoked by the client application.
+ * printBoard() interact with a Game class in order to call these methods.
  */
 package logic;
 import java.util.ArrayList;
