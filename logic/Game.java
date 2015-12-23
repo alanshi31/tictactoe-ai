@@ -40,7 +40,7 @@ public class Game {
 
 	/** Decides whether the player wants to go first or the computer */
 	private void makeFirstMove() {
-		System.out.println("Who starts? 1 - User | 2 - Computer");
+		System.out.print("Who starts? 1 - User | 2 - Computer ");
 		try {
 			int choice = board.getScanner().nextInt();
 			if (choice == 1) {
@@ -63,14 +63,21 @@ public class Game {
 			// player move
 			this.board.getInput();
 			displayBoard();
+			System.out.println();
 			if (!this.board.isRunning()) break;
 			
 			// computer move
 			this.board.runMinimax(0, Player.COMPUTER);
+			System.out.println("Evaluating options...");
 			for (Cell cell : this.board.getRootValues())
 				System.out.println("Cell: " + cell + " Minimax: " + cell.getMinimax());
-			this.board.move(board.getBestMove(), Player.COMPUTER);
+			Cell bestCell = board.getBestMove();
+			this.board.move(bestCell, Player.COMPUTER);
+			
+			System.out.println();
+			System.out.println("Computer's move: (" + bestCell.getY() + ", " + bestCell.getX() + ")");
 			displayBoard();
+			System.out.println();
 		}
 	}
 
