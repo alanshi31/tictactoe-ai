@@ -8,7 +8,7 @@ package pieces;
 
 public enum Player {
 	
-	COMPUTER("X"), USER("O"), NONE("-");
+	COMPUTER("O"), USER("X"), NONE("-");
 	
 	private final String text;
 	
